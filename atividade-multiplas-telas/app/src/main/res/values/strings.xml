@@ -7,6 +7,12 @@
 
     <string name="tv_login">Usuário/Email</string>
     <string name="tv_senha">Senha</string>
+    <string name="tv_sexo">Sexo</string>
+    <string name="tv_nome_completo">Nome Completo</string>
+    <string name="tv_nascimento">Nascimento</string>
+    <string name="tv_telefone">Telefone</string>
+    <string name="op_feminino">Feminino</string>
+    <string name="op_masculino">Masculino</string>
 
     <string name="message_error_login">O usuario/email é obrigatório</string>
     <string name="message_error_senha">A senha é obrigatória</string>

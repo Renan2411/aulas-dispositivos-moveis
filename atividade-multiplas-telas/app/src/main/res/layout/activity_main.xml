@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/bem_vindo"
@@ -22,24 +23,31 @@
         android:id="@+id/btLogin"
         android:layout_width="202dp"
         android:layout_height="43dp"
+        android:layout_marginTop="84dp"
         android:text="@string/login"
-        tools:layout_editor_absoluteX="107dp"
-        tools:layout_editor_absoluteY="335dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/btCadastrar"
         android:layout_width="198dp"
         android:layout_height="47dp"
+        android:layout_marginTop="56dp"
         android:text="@string/cadastro"
-        tools:layout_editor_absoluteX="109dp"
-        tools:layout_editor_absoluteY="399dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btLogin" />
 
     <Button
         android:id="@+id/btSobre"
         android:layout_width="197dp"
         android:layout_height="49dp"
         android:text="@string/sobre"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="466dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btCadastrar"
+        app:layout_constraintVertical_bias="0.183" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

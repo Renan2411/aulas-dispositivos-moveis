@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">atividade-multiplas-telas</string>
+    <string name="login">Login</string>
+    <string name="cadastro">Cadastro</string>
+    <string name="sobre">Sobre</string>
+    <string name="bem_vindo">Bem Vindo!!</string>
+
+    <string name="tv_login">Usuário/Email</string>
+    <string name="tv_senha">Senha</string>
+
+    <string name="message_error_login">O usuario/email é obrigatório</string>
+    <string name="message_error_senha">A senha é obrigatória</string>
+
+    <string name="message_fazer_cadastro">Cadastre-se aqui</string>
+    <string name="message_voltar_home">Voltar para o início</string>
+</resources>

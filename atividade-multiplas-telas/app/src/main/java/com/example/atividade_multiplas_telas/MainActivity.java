@@ -1,5 +1,6 @@
 package com.example.atividade_multiplas_telas;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     Button btCadastrar, btLogin, btSobre;
+    Intent telaLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart(){
         super.onStart();
         this.setComponentes();
+        this.setIntents();
         this.setListeners();
     }
 
@@ -37,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
         btCadastrar = (Button) findViewById(R.id.btCadastrar);
         btLogin = (Button) findViewById(R.id.btLogin);
         btSobre = (Button) findViewById(R.id.btSobre);
+    }
+
+    private void setIntents(){
+        telaLogin = new Intent(this, TelaLogin.class);
     }
 
     private void setListeners(){
@@ -49,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         return new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("Botão Login");
+                startActivity(telaLogin);
             }
         };
     }

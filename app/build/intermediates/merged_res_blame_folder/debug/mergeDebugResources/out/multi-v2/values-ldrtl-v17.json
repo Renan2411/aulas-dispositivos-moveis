@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.atividade_multiplas_telas.app-mergeDebugResources-29:/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "outputFile": "com.example.notification.app-mergeDebugResources-29:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "/home/renan/.gradle/caches/transforms-3/4ed0edefc69c1dfe12ba5955b90ee5da/transformed/material-1.10.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
+                    "source": "/home/az/.gradle/caches/transforms-3/b22e8f24271d4914e73a465b71473313/transformed/material-1.11.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

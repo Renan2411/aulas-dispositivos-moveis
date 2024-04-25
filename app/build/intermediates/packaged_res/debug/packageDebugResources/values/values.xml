@@ -2,14 +2,14 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <string name="app_name">atividade-multiplas-telas</string>
-    <string name="bem_vindo">Bem Vindo!!</string>
-    <string name="cadastro">Cadastro</string>
-    <string name="login">Login</string>
-    <string name="sobre">Sobre</string>
-    <style name="Base.Theme.Atividademultiplastelas" parent="Theme.Material3.DayNight.NoActionBar">
+    <string name="alert">Alert</string>
+    <string name="app_name">notification</string>
+    <string name="estendidas">Estendidas</string>
+    <string name="simples">Notification Simples</string>
+    <string name="toast">Tost</string>
+    <style name="Base.Theme.Notification" parent="Theme.Material3.DayNight.NoActionBar">
         
         
     </style>
-    <style name="Theme.Atividademultiplastelas" parent="Base.Theme.Atividademultiplastelas"/>
+    <style name="Theme.Notification" parent="Base.Theme.Notification"/>
 </resources>

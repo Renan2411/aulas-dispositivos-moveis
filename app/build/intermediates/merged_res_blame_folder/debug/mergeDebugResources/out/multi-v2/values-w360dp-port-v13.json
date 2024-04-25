@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.atividade_multiplas_telas.app-mergeDebugResources-29:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+            "outputFile": "com.example.notification.app-mergeDebugResources-29:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/home/renan/.gradle/caches/transforms-3/4ed0edefc69c1dfe12ba5955b90ee5da/transformed/material-1.10.0/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+                    "source": "/home/az/.gradle/caches/transforms-3/b22e8f24271d4914e73a465b71473313/transformed/material-1.11.0/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

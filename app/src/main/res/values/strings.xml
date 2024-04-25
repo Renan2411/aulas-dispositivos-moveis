@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">notification</string>
+    <string name="toast">Tost</string>
+    <string name="alert">Alert</string>
+    <string name="simples">Notification Simples</string>
+    <string name="estendidas">Estendidas</string>
+</resources>

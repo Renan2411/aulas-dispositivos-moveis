@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.atividade_multiplas_telas",
+  "applicationId": "com.example.notification",
   "variantName": "debug",
   "elements": [
     {

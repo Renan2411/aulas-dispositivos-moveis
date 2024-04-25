@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     Button btCadastrar, btLogin, btSobre;
-    Intent telaLogin;
+    Intent telaLogin, telaCadastro, telaSobre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void setIntents(){
         telaLogin = new Intent(this, TelaLogin.class);
+        telaCadastro = new Intent(this, TelaCadastro.class);
+        telaSobre = new Intent(this, TelaSobre.class);
     }
 
     private void setListeners(){
@@ -65,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         return new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("Botão Cadastar");
+                startActivity(telaCadastro);
             }
         };
     }
@@ -74,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         return new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("Botão Sobre");
+                startActivity(telaSobre);
             }
         };
     }

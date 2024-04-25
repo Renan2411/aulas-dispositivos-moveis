@@ -47,8 +47,8 @@ public class TelaLogin extends AppCompatActivity {
         tfSenha = (EditText) findViewById(R.id.tfSenha);
         tvErroLogin = (TextView) findViewById(R.id.tvErroLogin);
         tvErroSenha = (TextView) findViewById(R.id.tvErroSenha);
-        btLogar = (Button) findViewById(R.id.btLogar);
-        linkCadastro = (TextView) findViewById(R.id.linkCadastrar);
+        btLogar = (Button) findViewById(R.id.btCadastrarDados);
+        linkCadastro = (TextView) findViewById(R.id.linkLogin);
         linkHome = (TextView) findViewById(R.id.linkHome);
     }
 
@@ -98,7 +98,7 @@ public class TelaLogin extends AppCompatActivity {
 
     private void verificarCampoNome() {
         if (ehCampoNomeVazio()) {
-            tvErroLogin.setText("O login é obrigatório");
+            tvErroLogin.setText(R.string.message_error_login);
         } else {
             tvErroLogin.setText("");
         }
@@ -106,7 +106,7 @@ public class TelaLogin extends AppCompatActivity {
 
     private void verificarCampoSenha() {
         if (ehCampoSenhaVazio()) {
-            tvErroSenha.setText("A senha é obrigatória");
+            tvErroSenha.setText(R.string.message_error_senha);
         } else {
             tvErroSenha.setText("");
         }

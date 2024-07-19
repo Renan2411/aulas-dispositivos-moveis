@@ -2,6 +2,7 @@ package com.example.atividade_multiplas_telas;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -34,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
         this.setComponentes();
         this.setIntents();
         this.setListeners();
+
+        Log.i("APP", "ON START");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i("APP", "ON RESUME");
     }
 
     private void setComponentes(){

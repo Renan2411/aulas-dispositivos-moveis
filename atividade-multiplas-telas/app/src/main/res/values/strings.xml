@@ -16,7 +16,17 @@
 
     <string name="message_error_login">O usuario/email é obrigatório</string>
     <string name="message_error_senha">A senha é obrigatória</string>
+    <string name="message_error_nome_completo">O nome completo é obrigatório</string>
+    <string name="message_error_telefone">O telefone é obrigatório</string>
+    <string name="message_error_nascimento">A data de nascimento é obrigatório</string>
 
     <string name="message_fazer_cadastro">Cadastre-se aqui</string>
+    <string name="message_fazer_login">Faça login aqui</string>
     <string name="message_voltar_home">Voltar para o início</string>
+
+    <string name="sobre_aluno">Aluno: Renan Augusto Monteiro Duarte</string>
+    <string name="sobre_cruso">Curso: Sistemas de Informação</string>
+    <string name="sobre_semestre">Semestre: 7°</string>
+    <string name="sobre_saiba_mais">Saiba Mais</string>
+
 </resources>

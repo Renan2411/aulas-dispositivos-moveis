@@ -6,9 +6,11 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -16,6 +18,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import org.w3c.dom.Text;
 
 import java.util.Objects;
 
@@ -28,6 +32,11 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     Button btTela2, btTela3;
 
+    TextView tvResultado;
+    boolean flag;
+    Handler handler;
+    int controle = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +47,9 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        tvResultado = (TextView) findViewById(R.id.tvResultado);
+
 
         gerenciarSensores();
 
@@ -57,6 +69,68 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 abrirTela3(v);
             }
         });
+
+        handler = new Handler();
+    }
+
+    public void iniciarTarefa(View v) {
+        flag = true;
+
+        new Thread() {
+            @Override
+            public void run() {
+                while (flag) {
+                    Log.i("TT", "Tarega executand");
+
+                    //POST
+//                    handler.post(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            tvResultado.setText("");
+//                            tvResultado.setText(controle + "\nTarefa executando....");
+//                        }
+//                    });
+
+                    //POST COM ATRASO
+//                    handler.postDelayed(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            tvResultado.setText(controle + "\nTarefa executando....");
+//                        }
+//                    }, 3000);
+
+
+                    //RUN UI THREAD
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            tvResultado.setText(controle + "\nTarefa executando....");
+                        }
+                    });
+
+
+                    controle++;
+
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }.start();
+
+//        for (int i = 0; i < 50; i++) {
+//            tvResultado.setText(tvResultado.getText().toString() + "\nTarefa executando....");
+//            if(!flag){
+//                break;
+//            }
+//        }
+    }
+
+    public void pararTarefa(View v) {
+        flag = false;
+        controle = 1;
     }
 
     @Override
@@ -70,7 +144,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         dadosEnvio.putBoolean("verdadeiro", false);
     }
 
-    public void abrirTela2(View view){
+    public void abrirTela2(View view) {
         Intent intent = new Intent(this, Tela2.class);
 
         //intent.putExtra("Cumprimento", "Bem vindo a tela passando dados entre activities");
@@ -79,7 +153,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         startActivity(intent);
     }
 
-    public void abrirTela3(View view){
+    public void abrirTela3(View view) {
         Pessoa pessoa = new Pessoa("Renan", 1.70f, 75f);
 
         Intent intent = new Intent(this, Tela3.class);
@@ -99,21 +173,21 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     }
 
     private void gerenciarSensores() {
-        sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
-        sensorUmidade = sensorManager.getDefaultSensor(Sensor.TYPE_RELATIVE_HUMIDITY);
-        sensorTemperatura = sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE);
-
-        if (Objects.nonNull(sensorUmidade)) {
-            sensorManager.registerListener(this, sensorUmidade, SensorManager.SENSOR_DELAY_NORMAL);
-        } else {
-            Toast.makeText(this, "Sensor de umidade indisponível", Toast.LENGTH_SHORT).show();
-        }
-
-        if (Objects.nonNull(sensorTemperatura)) {
-            sensorManager.registerListener(this, sensorTemperatura, SensorManager.SENSOR_DELAY_NORMAL);
-        } else {
-            Toast.makeText(this, "Sensor de temperatura indisponível", Toast.LENGTH_SHORT).show();
-        }
+//        sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+//        sensorUmidade = sensorManager.getDefaultSensor(Sensor.TYPE_RELATIVE_HUMIDITY);
+//        sensorTemperatura = sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE);
+//
+//        if (Objects.nonNull(sensorUmidade)) {
+//            sensorManager.registerListener(this, sensorUmidade, SensorManager.SENSOR_DELAY_NORMAL);
+//        } else {
+//            Toast.makeText(this, "Sensor de umidade indisponível", Toast.LENGTH_SHORT).show();
+//        }
+//
+//        if (Objects.nonNull(sensorTemperatura)) {
+//            sensorManager.registerListener(this, sensorTemperatura, SensorManager.SENSOR_DELAY_NORMAL);
+//        } else {
+//            Toast.makeText(this, "Sensor de temperatura indisponível", Toast.LENGTH_SHORT).show();
+//        }
     }
 
     @Override

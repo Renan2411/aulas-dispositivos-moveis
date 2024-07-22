@@ -22,6 +22,13 @@
         android:ems="10"
         android:inputType="text" />
 
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="30sp" />
+
     <Button
         android:id="@+id/btTela2"
         android:layout_width="match_parent"
@@ -33,5 +40,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TELA 3" />
+
+    <Button
+        android:id="@+id/btIniciar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="iniciarTarefa"
+        android:text="INICIAR TAREFA" />
+
+    <Button
+        android:id="@+id/btFinalizar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="pararTarefa"
+        android:text="PARA TAREFA" />
 
 </LinearLayout>
